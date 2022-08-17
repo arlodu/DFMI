@@ -1,0 +1,219 @@
+POLEARM (DX‑5, Spear‑4, Staff‑4, or Two‑Handed Axe/Mace‑4)
+ Dueling Glaive 
+sw+2 cut 
+1, 2* 
+0U 
+$80 
+6 
+9†
+  or 
+thr+3 imp 
+1, 2* 
+0 
+– 
+– 
+9†
+ Dueling Halberd 
+sw+4 cut 
+1, 2* 
+0U 
+$120 
+10 
+12†
+  or 
+sw+3 imp 
+1, 2* 
+0U 
+– 
+– 
+12† 
+[2]
+  or 
+thr+3 imp 
+1, 2* 
+0 
+– 
+– 
+11†
+ Glaive 
+sw+3 cut 
+2, 3* 
+0U 
+$100 
+8 
+11‡
+  or 
+thr+3 imp 
+1-3* 
+0U 
+– 
+– 
+11†
+ Halberd 
+sw+5 cut 
+2, 3* 
+0U 
+$150 
+12 
+13‡
+  or 
+sw+4 imp 
+2, 3* 
+0U 
+– 
+– 
+13‡ 
+[2]
+  or 
+thr+3 imp 
+1-3* 
+0U 
+– 
+– 
+12†
+ Monk’s Spade 
+sw+1 cut 
+1, 2* 
+0U 
+$100 
+6 
+9†
+  or 
+sw+2 cr 
+1, 2* 
+0U 
+– 
+– 
+9†
+  or 
+thr+2 cut 
+1, 2* 
+0 
+– 
+– 
+9†
+ Naginata 
+sw+2 cut 
+1, 2* 
+0U 
+$100 
+6 
+9†
+  or 
+thr+3 imp 
+2 
+0 
+– 
+– 
+9†
+ Pollaxe 
+sw+4 cr 
+1, 2* 
+0U 
+$120 
+10 
+12†
+  or 
+sw+3 imp 
+1, 2* 
+0U 
+– 
+– 
+12† 
+[2]
+  or 
+thr+3 imp 
+1, 2* 
+0 
+– 
+– 
+11†
+SPEAR (DX‑5, Polearm‑4, or Staff‑2)
+ Heavy Spear 
+thr+4 imp 
+2, 3* 
+0U 
+$90 
+6 
+11†
+  or 
+thr+3 cut 
+3 
+0U 
+– 
+– 
+11†
+ Javelin 
+thr+1 imp 
+1 
+0 
+$30 
+2 
+6 
+[1]
+ Long Spear 
+thr+2 imp 
+2, 3* 
+0U 
+$60 
+5 
+11
+  two hands 
+thr+3 imp 
+2, 3* 
+0 
+– 
+– 
+10†
+ Pike 
+thr+3 imp 
+4, 5* 
+0U 
+$80 
+13 
+12†
+ Short Spear 
+thr+1 imp 
+1 
+0 
+$30 
+2 
+6
+  or 
+thr cut 
+1 
+0 
+– 
+– 
+6
+ Spear 
+thr+2 imp 
+1* 
+0 
+$40 
+4 
+10 
+[1]
+  two hands 
+thr+3 imp 
+1, 2* 
+0 
+– 
+– 
+9†
+ Trident 
+thr+3(0.5) imp 
+1* 
+0U 
+$80 
+5 
+11 
+[12]
+  two hands 
+thr+4(0.5) imp 
+1, 2* 
+0 
+– 
+– 
+10† 
+[12]
