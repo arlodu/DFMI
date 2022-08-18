@@ -23,6 +23,7 @@ def refineSource(sourceList):
             #check if we have an ongoing line of text
             #if so, append that line before the skill title
             if v > 0:
+                lineList.append(" ")
                 refList.append(lineList.copy())
                 lineList.clear()
                 v=0
@@ -43,6 +44,7 @@ def refineSource(sourceList):
         #Begin building the next line with the current word
         else:
             v=1
+            lineList.append(" ")
             refList.append(lineList.copy())
             lineList.clear()
             lineList.append(line.rstrip())
@@ -51,35 +53,64 @@ def refineSource(sourceList):
 #Returns a tuple of the specific weapon's table (a list of lists)
 #and the name of the skill as a string for those entries
 def weaponTableBuilder(newSource):
+
+
     #tracker for position in table
     n = 0
-    while n <= len(newSource):
+    wepTabl=[]
+    while n < len(newSource):
         #Check for skill name and step forward if so
         if 'DX' in newSource[n]:
             skillName = newSource[n]
             n = n+1
             continue
         else:
-            wepTabl = newSource[n].copy()
-            print(wepTabl)
+            wepTabl.append(newSource[n].copy())
+            n = n+1
+            if n < len(newSource):
                 if 'or' in newSource[n][0]:
-                    print(newSource[n][0])
+                    wepTabl.append(newSource[n].copy())
                     n = n+1
                     if n < len(newSource) and 'or' in newSource[n][0]:
-                        print(newSource[n][0])
+                        wepTabl.append(newSource[n].copy())
                         n = n+1
                 elif 'two hands' in newSource[n][0]:
-                    print(newSource[n][0])
+                    wepTabl.append(newSource[n].copy())
                     n = n+1
-                else:
-                    print('one line only')
+        wepTup = (wepTabl, skillName)
+        wepObj = weaponBuilder(wepTup)
+        weaponDict[wepObj.name] = wepObj
+        print(wepObj)
+        wepTabl.clear()
+    print(weaponDict)
 
 
+        #send wepTabl to weapon builder function
 #Returns a weapon object built from recieved tuple from weaponTableBuilder
-#def weaponBuilder(skill, table):
+def weaponBuilder(wepTup):
+    rows = len(wepTup[0])
+
+    match rows:
+        case 1:
+            # name, weight, cost, \
+            # skill1, damage1, reach1, parry1, ST1, notes, \
+            tempWeapon = weapon(wepTup[0][0][0], wepTup[0][0][5], wepTup[0][0][4], \
+            wepTup[1], wepTup[0][0][1], wepTup[0][0][2], wepTup[0][0][3], wepTup[0][0][6], wepTup[0][0][7])
+        case 2:
+            tempWeapon = weapon(wepTup[0][0][0], wepTup[0][0][5], wepTup[0][0][4], \
+            wepTup[1], wepTup[0][0][1], wepTup[0][0][2], wepTup[0][0][3], wepTup[0][0][6], wepTup[0][0][7])
+        case 3:
+            tempWeapon = weapon(wepTup[0][0][0], wepTup[0][0][5], wepTup[0][0][4], \
+            wepTup[1], wepTup[0][0][1], wepTup[0][0][2], wepTup[0][0][3], wepTup[0][0][6], wepTup[0][0][7])
+        case _:
+            tempWeapon = weapon(wepTup[0][0][0], wepTup[0][0][5], wepTup[0][0][4], \
+            wepTup[1], wepTup[0][0][1], wepTup[0][0][2], wepTup[0][0][3], wepTup[0][0][6], wepTup[0][0][7])
+    return tempWeapon
+
 
 
 weaponDict = {}
+
 
 file = open("itemList.txt", encoding='utf-8')
 source = file.readlines()
@@ -95,8 +126,9 @@ print(weapon1.name, weapon1.parry1, weapon1.damage1)
 #resembling the original table
 newSource = refineSource(source)
 
-for line in newSource:
-    print(line)
+#Prints out newSource table in readable format
+# for line in newSource:
+#     print(line)
 
 #
 weaponTableBuilder(newSource)
