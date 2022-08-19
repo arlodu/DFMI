@@ -1,4 +1,4 @@
-# import items from file into dictionary of items by name
+# import weapons from file into dictionary of weapons keyed by name
 
 from weaponClass import weapon
 
@@ -80,7 +80,6 @@ def weaponTableBuilder(newSource):
         wepTup = (wepTabl, skillName)
         wepObj = weaponBuilder(wepTup)
         weaponDict[wepObj.name] = wepObj
-        print(wepObj)
         wepTabl.clear()
     return weaponDict
 
@@ -109,28 +108,17 @@ def weaponBuilder(wepTup):
             print('no length?', wepTup)
     return tempWeapon
 
+def main():
 
+    weaponDict = {}
 
-weaponDict = {}
+    file = open("itemList.txt", encoding='utf-8')
+    source = file.readlines()
 
+    #Take the list and construct a list of lists table
+    #resembling the original table
+    newSource = refineSource(source)
 
-file = open("itemList.txt", encoding='utf-8')
-source = file.readlines()
+    weaponDict = weaponTableBuilder(newSource)
 
-
-
-#Take the list and construct a list of lists table
-#resembling the original table
-newSource = refineSource(source)
-
-weaponDict = weaponTableBuilder(newSource)
-
-print(weaponDict)
-
-
-#print(newSource[1][4])
-
-
-
-
-# Set last 'added' variable, add two hands condition, or condition, create instantiation function that can do the thing?
+    return weaponDict
