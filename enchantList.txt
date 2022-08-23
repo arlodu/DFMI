@@ -38,7 +38,8 @@ of Deflection
 [1, 2]
  Flaming Weapon 
 +2 fire 
-Melee Weapon $15,400 
+Melee Weapon 
+$15,400 
 Flaming 
 of Flame 
 [3]
@@ -59,11 +60,14 @@ of Solidity
  Fortify 
 +2 Damage Resistance 
 Armor 
-$4,000 Impenetrable of Invulnerability 
+$4,000 
+Impenetrable 
+of Invulnerability 
 [1]
  Icy Weapon 
 +2 cold 
-Melee Weapon $17,000 
+Melee Weapon 
+$17,000 
 Icy 
 of Ice 
 [3]
@@ -85,10 +89,13 @@ of Lightness
 -50% from weight 
 Armor/Shield 
 $10,000 
-Weightless of Weightlessness [1]
+Weightless 
+of Weightlessness 
+[1]
  Lightning Weapon 
 +2 electrical 
-Melee Weapon $15,300 
+Melee Weapon 
+$15,300 
 Crackling 
 of Shocking 
 [3]
@@ -127,7 +134,9 @@ Mighty
 of Smiting
  Puissance 
 +1 damage 
-Missile Weapon $10,000 Strongarm 
+Missile Weapon 
+$10,000 
+Strongarm 
 of Striking
  Puissance 
 +1 damage 

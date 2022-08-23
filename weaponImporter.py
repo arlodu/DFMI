@@ -53,7 +53,7 @@ def refineSource(sourceList):
 #Returns a tuple of the specific weapon's table (a list of lists)
 #and the name of the skill as a string for those entries
 def weaponTableBuilder(newSource):
-
+    weaponDict = {}
 
     #tracker for position in table
     n = 0
@@ -110,7 +110,7 @@ def weaponBuilder(wepTup):
 
 def main():
 
-    weaponDict = {}
+
 
     file = open("itemList.txt", encoding='utf-8')
     source = file.readlines()
